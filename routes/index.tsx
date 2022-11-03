@@ -14,9 +14,7 @@ export default function Home() {
           alt="the fresh logo: a sliced lemon dripping with juice"
         />
         <p class="my-6">
-          Welcome to `arch`. Try updating this message in the ./routes/index.tsx
-          file, and refresh.
-          Hello this is the index
+          This is a test of the git pull endpoint
         </p>
         <Counter start={3} />
       </div>
