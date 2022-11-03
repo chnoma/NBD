@@ -13,8 +13,10 @@ async function getCurrentCommitHash() {
 export const handler = async (req: Request, ctx: HandlerContext): Promise<Response> => {
     const runperm = (await Deno.permissions.query({ name: "run" })).state;
     if(runperm !== 'granted') return new Response(null, { status: 500 });
+    const hash = await getCurrentCommitHash();
     return new Response(JSON.stringify({
-        currentHash: await getCurrentCommitHash()
+        hash: hash,
+        link: `https://github.com/chnoma/NBD/commit/${hash}`
     }), {
         headers: {
             'content-type': 'application/json'
