@@ -1,7 +1,7 @@
 import { HandlerContext } from "$fresh/server.ts";
 
 async function add() {
-    return 2;
+    return 5;
 }
 
 export const handler = async (req: Request, ctx: HandlerContext): Promise<Response> => {
