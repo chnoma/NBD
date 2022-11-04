@@ -15,7 +15,6 @@ import { fetch, getHashes, pull } from '$src/git/mod.ts';
 setInterval(async () => {
     await fetch();
     const hashes = await getHashes();
-    console.log(hashes);
     if(hashes.heads !== hashes.remote) await pull();
 }, 10000)
 
