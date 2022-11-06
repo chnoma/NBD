@@ -13,6 +13,10 @@ export default function Home() {
       <div class="canvas" id="canvas">
         <div class="workspace" id="workspace">
           <Base_Node/>
+          <Base_Node/>
+          <Base_Node/>
+          <Base_Node/>
+          <Base_Node/>
         </div>
       </div>
       

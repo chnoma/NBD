@@ -12,14 +12,14 @@ export default class Base_Node extends Component {
                     <h5 onMouseDown={e => {
                         if(this.dragging === undefined) {
                             const element: Partial<HTMLElement> = e.srcElement!;
-                            window.onmousemove = e => {
+                            window.addEventListener('mousemove', e => {
                                 if(this.dragging) {
                                     const parent = element.parentElement!.parentElement!;
                                     const rect = parent.getBoundingClientRect()
                                     parent.style!.left = `${e.pageX - rect.width / 2}px`;
                                     parent.style!.top = `${e.pageY}px`;
                                 }
-                            }
+                            })
                         }
                         this.dragging = true;
                         const element: Partial<HTMLElement> = e.srcElement!;
