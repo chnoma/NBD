@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import Counter from "../islands/Counter.tsx";
-import Base_Node from "../islands/base_node.tsx"
+import Base_Node from "../islands/basenode.tsx"
 export default function Home() {
   return (
     <>
