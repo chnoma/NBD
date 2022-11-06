@@ -24,17 +24,18 @@ function draggable(e: MouseEvent) {
     }
 }
 
-export default class Base_Node extends Component {
+export default class BaseNode extends Component {
     pos1 = 0;
     pos2 = 0;
     pos3 = 0;
     pos4 = 0;
-    render() {
+    render(props) {
         return (
             <div class="node">
                 <div class="node-header">
-                    <h5 onMouseDown={draggable}>Base Node</h5>
+                    <h5 onMouseDown={draggable}>{props.children}</h5>
                 </div>
+                <Connection>Exec</Connection>
             </div>
         )
     

@@ -1,5 +1,5 @@
-export default function Connection() {
+export default function Connection(props) {
     return (
-        <img src="img/connection.png" align="right" class="connection"></img>
+        <div style="text-align: right">{props.children}<img src="img/exec.png" align="right" class="connection" draggable="false"></img></div>
     );
 }

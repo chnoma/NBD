@@ -10,8 +10,9 @@ import * as $3 from "./routes/api/joke.ts";
 import * as $4 from "./routes/api/math/add.ts";
 import * as $5 from "./routes/index.tsx";
 import * as $$0 from "./islands/Counter.tsx";
-import * as $$1 from "./islands/base_node.tsx";
+import * as $$1 from "./islands/basenode.tsx";
 import * as $$2 from "./islands/connection.tsx";
+import * as $$3 from "./islands/rootnode.tsx";
 
 const manifest = {
   routes: {
@@ -24,8 +25,9 @@ const manifest = {
   },
   islands: {
     "./islands/Counter.tsx": $$0,
-    "./islands/base_node.tsx": $$1,
+    "./islands/basenode.tsx": $$1,
     "./islands/connection.tsx": $$2,
+    "./islands/rootnode.tsx": $$3,
   },
   baseUrl: import.meta.url,
   config,
