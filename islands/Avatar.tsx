@@ -2,7 +2,7 @@ import { render, Component, ComponentProps, Attributes, ComponentChildren, Ref, 
 
 
 export default function Avatar(props: {
-    size: number
+    size: number,
 }) {
     return (
         <img src='https://images.heb.com/is/image/HEBGrocery/000377497' style={{
@@ -11,6 +11,8 @@ export default function Avatar(props: {
             border: 'solid',
             borderWidth: '5px',
             borderColor: 'black'
+        }} onClick={e => {
+            console.log(e)
         }}/>
     );
 }
