@@ -7,9 +7,9 @@ import * as $0 from "./routes/api/git/commits/latest.ts";
 import * as $1 from "./routes/api/git/webhook.ts";
 import * as $2 from "./routes/api/joke.ts";
 import * as $3 from "./routes/api/math/add.ts";
-import * as $4 from "./routes/index.tsx";
+import * as $4 from "./routes/components/Tweet.tsx";
+import * as $5 from "./routes/index.tsx";
 import * as $$0 from "./islands/Avatar.tsx";
-import * as $$1 from "./islands/Tweet.tsx";
 
 const manifest = {
   routes: {
@@ -17,11 +17,11 @@ const manifest = {
     "./routes/api/git/webhook.ts": $1,
     "./routes/api/joke.ts": $2,
     "./routes/api/math/add.ts": $3,
-    "./routes/index.tsx": $4,
+    "./routes/components/Tweet.tsx": $4,
+    "./routes/index.tsx": $5,
   },
   islands: {
     "./islands/Avatar.tsx": $$0,
-    "./islands/Tweet.tsx": $$1,
   },
   baseUrl: import.meta.url,
   config,
