@@ -1,0 +1,51 @@
+
+
+.custom-shape-divider-bottom-1667697541 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    align-self: flex-end;
+}
+
+.custom-shape-divider-bottom-1667697541 svg {
+    top: 50;
+    position: relative;
+    display: block;
+    width: calc(100vw + 1.3px);
+    height: 120px;
+}
+
+.custom-shape-divider-bottom-1667697541 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.header {
+    display: block;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(190deg, #739072, #54A551);
+    background-size: cover;
+    text-align: center;
+}
+
+.title {
+    color: white;
+    align-self: flex-start;
+    padding: 150px;
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.55))
+}
+
+.title h1 {
+    font-size: 80px;
+    font-family: 'Uni Sans Heavy';
+    line-height: 1em;
+}
+
+.title p {
+    font-family: 'Uni Sans Thin';
+    font-weight: 900;
+    font-size: 25px;
+    margin: 0px;
+}
