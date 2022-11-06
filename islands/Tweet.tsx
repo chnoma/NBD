@@ -1,7 +1,3 @@
-import { render, Component, ComponentProps, Attributes, ComponentChildren, Ref, ComponentChild } from 'https://esm.sh/v95/preact@10.11.0/src/index';
-
-import Avatar from '../islands/Avatar.tsx';
-
 interface Tweet {
     poster: string,
     reply?: string,
@@ -28,70 +24,20 @@ const users = new Map([
 
 export default function Tweet(props: Tweet) {    
     return (
-        <article class='outer tweet' style={{
-            padding: '1.5em',
-            width: '40em',
-            fontSize: '15px',
-            backgroundColor: 'black',
-            color: 'white',
-            margin: 'auto'
-        }}>
+        <article class='component-Tweet'>
             <div class='poster box'>
-                <img src={`./users/${props.poster}.jpg`} style={{
-                    display: 'inline-block',
-                    width: `3.5em`,
-                    borderRadius: '50%',
-                    border: 'solid',
-                    borderWidth: '0em',
-                    borderColor: 'white',
-                    marginRight: '1em'
-                }}/>
-                <div class='poster info' style={{
-                    display: 'inline-block',
-                    margin: 'auto',
-                    verticalAlign: 'middle'
-                }}>
-                    <span style={{
-                        display: 'inline-block',
-                        fontSize: '1.4em',
-                        fontWeight: '700',
-                        lineHeight: '1em'
-                    }}>{users.get(props.poster)!.name}</span>
-                    { users.get(props.poster)!.verified ? <img src='./verified.png' style={{
-                        width: '1.2em',
-                        display: 'inline-block',
-                        margin: '0.2em',
-                        float: 'right',
-                        filter: 'brightness(0) invert(1)'
-                    }} /> : null}
-                    <span style={{
-                        display: 'block',
-                        lineHeight: '1em',
-                        fontSize: '1em',
-                        fontWeight: '100',
-                        color: 'grey'
-                    }}>@{props.poster}</span>
+                <img src={`./users/${props.poster}.jpg`} class='avatar'/>
+                <div class='poster info'>
+                    <span class='name'>{users.get(props.poster)!.name}</span>
+                    { users.get(props.poster)!.verified ? <img src='./verified.png' class='verified' /> : null}
+                    <span class='handle'>@{props.poster}</span>
                 </div>
             </div>
-            { props.reply ? <span class="reply" style={{
-                    display: 'block',
-                    color: 'grey',
-                    paddingTop: '1em'
-                }}>Replying to <a href={`./users/${props.reply}`} style={{
-                    color: 'rgb(29, 155, 240)'
-                }}>@{props.reply}</a></span> : null}
-            <section class='content' style={{
-                fontSize: '1.5em',
-                width: 'auto',
-                lineHeight: '1.2em',
-                paddingTop: '0.8em'
-            }}>
+            { props.reply ? <span class="reply">Replying to <a href={`./users/${props.reply}`}>@{props.reply}</a></span> : null}
+            <section class='content'>
                 {props.content}
             </section>
-            <aside style={{
-                color: 'grey',
-                marginTop: '1em'
-            }}>
+            <aside class='time'>
                 {(() => {
                     const date = new Date(props.time * 1000);
                     return `${date.toUTCString()}`
