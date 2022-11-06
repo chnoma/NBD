@@ -7,17 +7,7 @@ export default function Home() {
       <Head>
         <title>Fresh App</title>
       </Head>
-      <div class="p-4 mx-auto max-w-screen-md">
-        <img
-          src="/logo.svg"
-          class="w-32 h-32"
-          alt="the fresh logo: a sliced lemon dripping with juice"
-        />
-        <p class="my-6">
-          This is a test of the git pull endpoint
-        </p>
-        <Counter start={3} />
-      </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ZiVziYIIwdA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </>
   );
 }
