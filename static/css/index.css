@@ -78,4 +78,6 @@ workspace {
     left: 0;
     z-index: -1;
     pointer-events: none;
+    background-color: black;
+    opacity: 0.4;
 }
