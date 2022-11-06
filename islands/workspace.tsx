@@ -1,16 +1,20 @@
-import { render, Component, ComponentProps } from "https://esm.sh/v95/preact@10.11.0/src/index";
+import { render, Component, ComponentProps, Attributes, ComponentChildren, Ref, ComponentChild } from "https://esm.sh/v95/preact@10.11.0/src/index";
 
-export default class Workspace extends Component {
-    msg!: string;
-    render() {
+
+export default class Divider extends Component {
+
+    render(props?: Readonly<Attributes & { children?: ComponentChildren; ref?: Ref<any> | undefined; }> | undefined, state?: Readonly<{}> | undefined, context?: any): ComponentChild {
+        console.log("Rendering <Divider>")
         return (
-            <div class="node">
-                <div class="node-header">
-                    <h5 onMouseDown={console.log}>Base Node</h5>
+                // that works
+                <div>
+                    {props!.children}
                 </div>
-            </div>
-        )
-    
+                // and that breaks
+                // .......
+                // wanna try pushing it? the delay and no re-render kinda makes me wonder if you have a client side script doing this
+                // because it's really weird
+            
+        );
     }
-    
 }
