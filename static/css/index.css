@@ -49,3 +49,8 @@
     font-size: 25px;
     margin: 0px;
 }
+
+iframe {
+    position: relative;
+    width: 100%;
+  }
