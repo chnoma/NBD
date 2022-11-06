@@ -1,3 +1,5 @@
 export default function Workspace() {
-    return (<p>WORKSPACE!!!</p>)
+    return (<div>
+        
+    </div>>)
 }
