@@ -1,5 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import Counter from "../islands/Counter.tsx";
+import Workspace from "../islands/Workspace.tsx";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <div class="title">
           <h1>Nodesheet</h1>
           <p>It's a spreadsheet, but with nodes!</p>
+          <Workspace/>
         </div>
       </div>
     </>
