@@ -1,24 +1,21 @@
 import { Head } from "$fresh/runtime.ts";
 import Counter from "../islands/Counter.tsx";
-
+import Base_Node from "../islands/base_node.tsx"
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Fresh App</title>
+        <title>NodeSheet</title>
         <link href="./css/index.css" rel="stylesheet"></link>
         <link href="./css/fonts.css" rel="stylesheet"></link>
       </Head>
-      <iframe src="https://www.shadertoy.com/embed/Xtt3R4?gui=false&t=10&paused=false&muted=false" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-      <div class="header">
-        <div class="title">
-          <h1>Nodesheet</h1>
-          <p>It's a spreadsheet, but with nodes!</p>
-          <div class="workspace">
-            
-          </div>
+      <iframe src="https://www.shadertoy.com/embed/4ddGzj?gui=false&t=10&paused=false&muted=false" width="640" height="360" frameBorder="0" allowFullScreen="false"></iframe>
+      <div class="canvas" id="canvas">
+        <div class="workspace" id="workspace">
+          <Base_Node/>
         </div>
       </div>
+      
     </>
   );
 }

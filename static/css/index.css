@@ -1,61 +1,4 @@
 
-
-.custom-shape-divider-bottom-1667697541 {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    align-self: flex-end;
-}
-
-.custom-shape-divider-bottom-1667697541 svg {
-    top: 50;
-    position: relative;
-    display: block;
-    width: calc(100vw + 1.3px);
-    height: 120px;
-}
-
-.custom-shape-divider-bottom-1667697541 .shape-fill {
-    fill: #FFFFFF;
-}
-
-.header {
-    height: 100vh;
-    display: flex;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(190deg, rgba(235, 122, 22, 0.75), rgba(249, 86, 178, 0.75));
-    background-size: cover;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-}
-
-.title {
-    mix-blend-mode: normal;
-    color: white;
-    align-self: flex-start;
-    padding: 150px;
-    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.55))
-}
-
-.title h1 {
-    mix-blend-mode: normal;
-    font-size: 80px;
-    font-family: 'Uni Sans Heavy';
-    line-height: 1em;
-}
-
-.title p {
-    mix-blend-mode: normal;
-    font-family: 'Uni Sans Thin';
-    font-weight: 900;
-    font-size: 25px;
-    margin: 0px;
-}
-
 iframe {
     position: fixed;
     width: 100%;
@@ -64,20 +7,70 @@ iframe {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
+    filter: hue-rotate(180deg);
 }
 
-workspace {
-    position: fixed;
-    width: 85%;
-    height: 85%;
+.canvas {
+    color: white;
+    height: 100vh;
+    display: flex;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(190deg, rgba(235, 122, 22, 0.75), rgba(249, 86, 178, 0.75));
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    z-index: 1;
+}
+
+
+.workspace {
+    margin: auto;
+    width: 95vw;
+    height: 85vh;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
-    pointer-events: none;
-    background-color: black;
-    opacity: 0.4;
+    z-index: 2;
+    background-color: rgba(12, 0, 36, 0.9);
+    border: solid;
+    border-color: white;
+    border-width: 1.5px;
+}
+
+.workspace * {
+    z-index: 5;
+}
+
+.node-header {
+    background-color: rgba(82, 7, 22, 0.582);
+}
+
+.node {
+    left: 10px;
+    position: absolute;
+    height: 6em;
+    width: 12em;
+    background-color: rgba(220, 20, 60, 0.582);
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.connection {
+    background-color: transparent;
+    mix-blend-mode: overlay;
+    cursor:pointer;
+}
+
+.button {
+    padding: 0.5em;
+    background-color: grey;
+    color: black;
+    cursor: pointer;
+    z-index: 0;
 }
