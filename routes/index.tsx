@@ -9,7 +9,7 @@ export default function Home() {
         <link href="./css/index.css" rel="stylesheet"></link>
         <link href="./css/fonts.css" rel="stylesheet"></link>
       </Head>
-      <iframe src="https://www.shadertoy.com/embed/Xtt3R4?gui=true&t=10&paused=true&muted=false" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+      <iframe src="https://www.shadertoy.com/embed/Xtt3R4?gui=false&t=10&paused=false&muted=false" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
       <div class="header">
         <div class="title">
           <h1>Nodesheet</h1>
