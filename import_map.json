@@ -9,6 +9,8 @@
     "twind": "https://esm.sh/twind@0.16.17",
     "twind/": "https://esm.sh/twind@0.16.17/",
     "$src/": "./src/",
-    "css/": "./static/css/"
+    "css/": "./static/css/",
+    "routes/": "./routes/",
+    "islands/": "./islands/"
   }
 }

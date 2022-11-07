@@ -26,7 +26,7 @@ export default function Tweet(props: Tweet) {
     return (
         <article class='text-white bg-black w-1/2 m-auto pl-7 pr-7'>
             <div class='pt-5'>
-                <img src={`./users/${props.poster}.jpg`} class='w-16 inline-block mr-5 rounded-full'/>
+                <img src={`./users/${props.poster}.jpg`} class='w-16 inline-block mr-5 rounded-full' onClick={console.log}/>
                 <div class='inline-block m-auto align-middle'>
                     <span class='text-2xl leading-tight font-bold'>{users.get(props.poster)!.name}</span>
                     { users.get(props.poster)!.verified ? <img src='./verified.png' class='w-5 float-right m-1 mt-1.5' style='filter: brightness(100)'/> : null}
